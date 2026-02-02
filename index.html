@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 | Информация для начинающих</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <span class="logo-icon"><i class="fas fa-bootstrap"></i></span>
+                    <span class="logo-text">Bootstrap 5</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="#grid" class="nav-link"><i class="fas fa-th"></i> Сетка</a></li>
+                    <li><a href="#components" class="nav-link"><i class="fas fa-cube"></i> Компоненты</a></li>
+                    <li><a href="#utilities" class="nav-link"><i class="fas fa-tools"></i> Утилиты</a></li>
+                    <li><a href="#layout" class="nav-link"><i class="fas fa-layer-group"></i> Макеты</a></li>
+                    <li><a href="#examples" class="nav-link"><i class="fas fa-magic"></i> Примеры</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero" id="home">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Учебник по <span class="highlight">Bootstrap 5</span></h1>
+                        <p class="hero-subtitle">Изучите создание современных адаптивных сайтов с помощью Bootstrap 5. Простые примеры для начинающих веб-разработчиков.</p>
+                        <div class="hero-buttons">
+                            <a href="#grid" class="btn btn-primary">Начать обучение <i class="fas fa-arrow-down"></i></a>
+                            <a href="#examples" class="btn btn-outline">Смотреть примеры</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-visual">
+                        <div class="bootstrap-demo" id="heroDemo">
+                            <div class="demo-container">
+                                <div class="row g-3">
+                                    <div class="col-4">
+                                        <div class="demo-box" id="demoBox1">
+                                            <i class="fas fa-th"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="demo-box" id="demoBox2">
+                                            <i class="fas fa-cube"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="demo-box" id="demoBox3">
+                                            <i class="fas fa-palette"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="demo-box" id="demoBox4">
+                                            <i class="fas fa-layer-group"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="demo-box" id="demoBox5">
+                                            <i class="fas fa-mobile-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="demo-components mt-4">
+                                    <button class="btn btn-sm btn-demo me-2">Кнопка</button>
+                                    <div class="badge bg-demo me-2">Бейдж</div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-demo" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section intro-section">
+            <h2 class="section-title">Что такое Bootstrap?</h2>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p><strong>Bootstrap</strong> — это самый популярный CSS-фреймворк для создания адаптивных и мобильных веб-сайтов. С его помощью можно быстро создавать современные интерфейсы без глубоких знаний CSS.</p>
+                    <p>В этом учебнике мы рассмотрим основные концепции:</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-arrow-right"></i> <strong>Система сеток</strong> — 12-колоночная адаптивная сетка</li>
+                        <li><i class="fas fa-arrow-right"></i> <strong>Компоненты</strong> — готовые UI элементы</li>
+                        <li><i class="fas fa-arrow-right"></i> <strong>Утилиты</strong> — вспомогательные классы</li>
+                        <li><i class="fas fa-arrow-right"></i> <strong>Адаптивный дизайн</strong> — mobile-first подход</li>
+                        <li><i class="fas fa-arrow-right"></i> <strong>Кастомизация</strong> — настройка через Sass переменные</li>
+                    </ul>
+                    <p>Bootstrap стал стандартом в веб-разработке. Он позволяет создавать профессиональные интерфейсы в разы быстрее, обеспечивая кроссбраузерность и адаптивность.</p>
+                </div>
+                <div class="intro-code">
+                    <pre><code class="html">&lt;!-- Пример сетки Bootstrap --&gt;
+&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-md-4"&gt;
+      &lt;div class="card"&gt;
+        &lt;div class="card-body"&gt;
+          &lt;h5 class="card-title"&gt;Заголовок карточки&lt;/h5&gt;
+          &lt;p class="card-text"&gt;Текст карточки&lt;/p&gt;
+          &lt;a href="#" class="btn btn-primary"&gt;Кнопка&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="section tutorial-section" id="grid">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Система сеток Bootstrap</h2>
+            <p class="section-subtitle">12-колоночная адаптивная сетка — основа Bootstrap.</p>
+
+            <div class="tutorial-card">
+                <div class="tutorial-content">
+                    <h3 class="tutorial-title">Классы сетки</h3>
+                    <p>Bootstrap использует систему из 12 колонок с шестью контрольными точками:</p>
+
+                    <div class="properties-grid">
+                        <div class="property">
+                            <h4><code>.col-</code></h4>
+                            <p>Колонки для экранов менее 576px (xs). Например: <code>.col-6</code> создаёт колонку шириной 6/12 (50%).</p>
+                        </div>
+                        <div class="property">
+                            <h4><code>.col-sm-</code></h4>
+                            <p>Колонки для экранов ≥576px (small). Применяется от 576px и выше.</p>
+                        </div>
+                        <div class="property">
+                            <h4><code>.col-md-</code></h4>
+                            <p>Колонки для экранов ≥768px (medium). Используется для планшетов.</p>
+                        </div>
+                        <div class="property">
+                            <h4><code>.col-lg-</code></h4>
+                            <p>Колонки для экранов ≥992px (large). Для ноутбуков и десктопов.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <h4><i class="fas fa-lightbulb"></i> Mobile-first подход</h4>
+                        <p>Bootstrap использует mobile-first подход. Стили сначала пишутся для мобильных, затем добавляются медиа-запросы для более крупных экранов.</p>
+                        <pre><code>&lt;div class="col-12 col-md-6 col-lg-4"&gt;
+  <!-- На мобильных: 12 колонок (100%)
+       На планшетах: 6 колонок (50%)
+       На десктопах: 4 колонки (33%) -->
+&lt;/div&gt;</code></pre>
+                    </div>
+
+                    <h3 class="tutorial-title">Структура сетки</h3>
+                    <p>Сетка Bootstrap состоит из трёх основных элементов:</p>
+                    <div class="animated-properties">
+                        <div class="property-category">
+                            <h4>Контейнер</h4>
+                            <ul>
+                                <li><code>.container</code> — центрированный контейнер с фиксированной шириной</li>
+                                <li><code>.container-fluid</code> — контейнер на всю ширину экрана</li>
+                                <li><code>.container-{breakpoint}</code> — адаптивный контейнер</li>
+                            </ul>
+                        </div>
+                        <div class="property-category">
+                            <h4>Строки</h4>
+                            <ul>
+                                <li><code>.row</code> — горизонтальная группа колонок</li>
+                                <li><code>.row-cols-*</code> — автоматическое количество колонок</li>
+                                <li><code>.g-*</code> — отступы (gaps) между колонками</li>
+                            </ul>
+                        </div>
+                        <div class="property-category">
+                            <h4>Колонки</h4>
+                            <ul>
+                                <li><code>.col</code> — автоматическая ширина</li>
+                                <li><code>.col-*</code> — явная ширина (1-12)</li>
+                                <li><code>.col-auto</code> — ширина по содержимому</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="tutorial-note">
+                        <i class="fas fa-exclamation-triangle"></i> <strong>Важно:</strong> Все колонки должны быть внутри <code>.row</code>, а все строки внутри <code>.container</code> или <code>.container-fluid</code>.
+                    </p>
+                </div>
+
+                <div class="tutorial-demo">
+                    <h4>Интерактивная демонстрация:</h4>
+                    <div class="demo-container">
+                        <div class="grid-demo" id="gridDemo">
+                            <div class="row g-2" id="demoRow">
+                                <div class="col-3"><div class="grid-cell">.col-3</div></div>
+                                <div class="col-3"><div class="grid-cell">.col-3</div></div>
+                                <div class="col-3"><div class="grid-cell">.col-3</div></div>
+                                <div class="col-3"><div class="grid-cell">.col-3</div></div>
+                                <div class="col-6"><div class="grid-cell">.col-6</div></div>
+                                <div class="col-6"><div class="grid-cell">.col-6</div></div>
+                                <div class="col-4"><div class="grid-cell">.col-4</div></div>
+                                <div class="col-4"><div class="grid-cell">.col-4</div></div>
+                                <div class="col-4"><div class="grid-cell">.col-4</div></div>
+                                <div class="col-12"><div class="grid-cell">.col-12</div></div>
+                            </div>
+                        </div>
+                        <div class="demo-controls">
+                            <button class="control-btn" id="gridResponsiveBtn">Адаптивный режим</button>
+                            <div class="slider-container">
+                                <label for="columnsSlider">Колонок в строке: <span id="columnsValue">4</span></label>
+                                <input type="range" id="columnsSlider" min="1" max="6" step="1" value="4">
+                            </div>
+                            <div class="slider-container">
+                                <label for="gapSlider">Отступы: <span id="gapValue">8px</span></label>
+                                <input type="range" id="gapSlider" min="0" max="24" step="4" value="8">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-code">
+                        <pre><code id="gridDemoCode">&lt;!-- Сетка Bootstrap --&gt;
+&lt;div class="container"&gt;
+  &lt;div class="row g-3"&gt;
+    &lt;div class="col-md-4"&gt;
+      &lt;div class="card"&gt;Карточка 1&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-4"&gt;
+      &lt;div class="card"&gt;Карточка 2&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-4"&gt;
+      &lt;div class="card"&gt;Карточка 3&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section tutorial-section" id="components">
+            <h2 class="section-title"><i class="fas fa-cube"></i> Компоненты Bootstrap</h2>
+            <p class="section-subtitle">Готовые UI элементы для быстрой разработки интерфейсов.</p>
+
+            <div class="tutorial-card">
+                <div class="tutorial-content">
+                    <h3 class="tutorial-title">Основные компоненты</h3>
+                    <p>Bootstrap включает десятки готовых компонентов. Вот самые популярные:</p>
+
+                    <div class="triggers-grid">
+                        <div class="trigger-card">
+                            <div class="trigger-icon">
+                                <i class="fas fa-square"></i>
+                            </div>
+                            <h4>Кнопки</h4>
+                            <p>Стилизованные кнопки с вариантами цвета, размера и состояния.</p>
+                            <pre><code class="html">&lt;button class="btn btn-primary"&gt;
+  Основная кнопка
+&lt;/button&gt;</code></pre>
+                        </div>
+
+                        <div class="trigger-card">
+                            <div class="trigger-icon">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <h4>Карточки</h4>
+                            <p>Гибкие контейнеры для контента с заголовками, изображениями и кнопками.</p>
+                            <pre><code class="html">&lt;div class="card" style="width: 18rem;"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Заголовок&lt;/h5&gt;
+    &lt;p class="card-text"&gt;Текст карточки&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="trigger-card">
+                            <div class="trigger-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <h4>Оповещения</h4>
+                            <p>Контекстные сообщения обратной связи для пользователей.</p>
+                            <pre><code class="html">&lt;div class="alert alert-success"&gt;
+  Операция выполнена успешно!
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="trigger-card">
+                            <div class="trigger-icon">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                            <h4>Навигация</h4>
+                            <p>Адаптивные навигационные панели, табы и пагинация.</p>
+                            <pre><code class="html">&lt;nav class="navbar navbar-expand-lg"&gt;
+  &lt;div class="container-fluid"&gt;
+    &lt;a class="navbar-brand" href="#"&gt;Brand&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <h3 class="tutorial-title">Интерактивные компоненты</h3>
+                    <p>Bootstrap также включает интерактивные компоненты с JavaScript:</p>
+
+                    <div class="timing-functions-demo">
+                        <div class="timing-function" data-timing="modal">
+                            <div class="timing-visual">
+                                <div class="timing-line"></div>
+                                <div class="timing-ball">
+                                    <i class="fas fa-window-maximize"></i>
+                                </div>
+                            </div>
+                            <div class="timing-info">
+                                <h4><code>Модальные окна</code></h4>
+                                <p>Всплывающие окна для диалогов, форм и уведомлений.</p>
+                                <button class="timing-btn" data-code="modal">Показать код</button>
+                            </div>
+                        </div>
+
+                        <div class="timing-function" data-timing="dropdown">
+                            <div class="timing-visual">
+                                <div class="timing-line"></div>
+                                <div class="timing-ball">
+                                    <i class="fas fa-caret-down"></i>
+                                </div>
+                            </div>
+                            <div class="timing-info">
+                                <h4><code>Выпадающие списки</code></h4>
+                                <p>Контекстные меню для навигации и действий.</p>
+                                <button class="timing-btn" data-code="dropdown">Показать код</button>
+                            </div>
+                        </div>
+
+                        <div class="timing-function" data-timing="collapse">
+                            <div class="timing-visual">
+                                <div class="timing-line"></div>
+                                <div class="timing-ball">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="timing-info">
+                                <h4><code>Сворачиваемые элементы</code></h4>
+                                <p>Показать/скрыть контент с анимацией.</p>
+                                <button class="timing-btn" data-code="collapse">Показать код</button>
+                            </div>
+                        </div>
+
+                        <div class="timing-function" data-timing="carousel">
+                            <div class="timing-visual">
+                                <div class="timing-line"></div>
+                                <div class="timing-ball">
+                                    <i class="fas fa-images"></i>
+                                </div>
+                            </div>
+                            <div class="timing-info">
+                                <h4><code>Карусели</code></h4>
+                                <p>Слайд-шоу для циклического перебора элементов.</p>
+                                <button class="timing-btn" data-code="carousel">Показать код</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <h4><i class="fas fa-code"></i> JavaScript инициализация</h4>
+                        <p>Для работы интерактивных компонентов нужно подключить JavaScript Bootstrap и инициализировать их.</p>
+                        <pre><code>// Инициализация модального окна
+var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+myModal.show();</code></pre>
+                        <button class="btn btn-outline" id="componentDemoBtn">Демо: Открыть модальное окно</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section tutorial-section" id="utilities">
+            <h2 class="section-title"><i class="fas fa-tools"></i> Утилиты Bootstrap</h2>
+            <p class="section-subtitle">Вспомогательные классы для быстрой стилизации.</p>
+
+            <div class="tutorial-card">
+                <div class="tutorial-content">
+                    <h3 class="tutorial-title">Классы утилит</h3>
+                    <p>Утилиты Bootstrap позволяют стилизовать элементы без написания кастомного CSS:</p>
+
+                    <div class="code-example">
+                        <h4>Синтаксис утилит:</h4>
+                        <pre><code class="css">/* Отступы */
+.m-*  /* margin */
+.p-*  /* padding */
+.mt-* /* margin-top */
+.pb-* /* padding-bottom */
+
+/* Текст */
+.text-*      /* цвет текста */
+.fw-*        /* жирность */
+.fs-*        /* размер шрифта */
+.text-*      /* выравнивание */
+
+/* Фон */
+.bg-*        /* цвет фона */
+
+/* Flexbox */
+.d-flex      /* display flex */
+.justify-*   /* выравнивание по главной оси */
+.align-*     /* выравнивание по поперечной оси */
+
+/* Границы */
+.border      /* граница */
+.rounded     /* скругление */
+.shadow      /* тень */</code></pre>
+                    </div>
+
+                    <h3 class="tutorial-title">Размеры и отступы</h3>
+                    <p>Bootstrap использует систему размеров от 0 до 5 для отступов:</p>
+
+                    <div class="properties-grid">
+                        <div class="property">
+                            <h4><code>0</code></h4>
+                            <p>0rem (0px) — отсутствие отступа.</p>
+                        </div>
+                        <div class="property">
+                            <h4><code>1</code></h4>
+                            <p>0.25rem (4px) — маленький отступ.</p>
+                        </div>
+                        <div class="property">
+                            <h4><code>2</code></h4>
+                            <p>0.5rem (8px) — стандартный отступ.</p>
+                        </div>
+                        <div class="property">
+                            <h4><code>3</code></h4>
+                            <p>1rem (16px) — средний отступ.</p>
+                        </div>
+                        <div class="property">
+                            <h4><code>4</code></h4>
+                            <p>1.5rem (24px) — большой отступ.</p>
+                        </div>
+                        <div class="property">
+                            <h4><code>5</code></h4>
+                            <p>3rem (48px) — очень большой отступ.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <h4><i class="fas fa-bolt"></i> Автоматизация с помощью утилит</h4>
+                        <p>Все утилиты можно комбинировать для создания сложных стилей без CSS:</p>
+                        <pre><code>&lt;div class="d-flex justify-content-between 
+            align-items-center 
+            p-3 
+            bg-light 
+            border 
+            rounded 
+            shadow-sm"&gt;
+  &lt;span class="fw-bold text-primary"&gt;Заголовок&lt;/span&gt;
+  &lt;button class="btn btn-success btn-sm"&gt;Действие&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+
+                    <div class="keyframes-demo">
+                        <h4>Демонстрация утилит:</h4>
+                        <div class="keyframes-visual">
+                            <div class="keyframes-object" id="utilitiesObject">
+                                <div class="utility-demo">
+                                    <div class="d-flex justify-content-between align-items-center p-3 bg-primary text-white rounded mb-3">
+                                        <span class="fw-bold">Flex утилиты</span>
+                                        <span class="badge bg-light text-dark">.d-flex</span>
+                                    </div>
+                                    <div class="p-3 border rounded bg-light mb-3">
+                                        <p class="text-center text-success fw-bold mb-0">Центрированный текст</p>
+                                    </div>
+                                    <div class="p-3 shadow rounded bg-white">
+                                        <div class="progress mb-2">
+                                            <div class="progress-bar bg-success" style="width: 75%"></div>
+                                        </div>
+                                        <small class="text-muted">Прогресс бар с тенью</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-controls">
+                            <button class="control-btn" id="utilitiesChange">Изменить стили</button>
+                            <button class="control-btn btn-outline" id="utilitiesReset">Сбросить</button>
+                            <div class="slider-container">
+                                <label for="paddingSlider">Отступы: <span id="paddingValue">3</span></label>
+                                <input type="range" id="paddingSlider" min="0" max="5" step="1" value="3">
+                            </div>
+                        </div>
+                        <div class="demo-code">
+                            <pre><code id="utilitiesCode">&lt;!-- Пример использования утилит --&gt;
+&lt;div class="card shadow border-0"&gt;
+  &lt;div class="card-body p-4"&gt;
+    &lt;h5 class="card-title text-primary mb-3"&gt;
+      &lt;i class="fas fa-star me-2"&gt;&lt;/i&gt;
+      Заголовок карточки
+    &lt;/h5&gt;
+    &lt;p class="card-text text-muted"&gt;
+      Текст карточки с использованием утилит Bootstrap
+    &lt;/p&gt;
+    &lt;div class="d-flex justify-content-between align-items-center mt-4"&gt;
+      &lt;small class="text-muted"&gt;Вчера&lt;/small&gt;
+      &lt;button class="btn btn-sm btn-outline-primary"&gt;
+        Подробнее
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section tutorial-section" id="layout">
+            <h2 class="section-title"><i class="fas fa-layer-group"></i> Макеты и адаптивность</h2>
+            <p class="section-subtitle">Создание адаптивных макетов с помощью Bootstrap.</p>
+
+            <div class="tutorial-card">
+                <div class="tutorial-content">
+                    <h3 class="tutorial-title">Breakpoints (Контрольные точки)</h3>
+                    <p>Bootstrap использует шесть контрольных точек для адаптивного дизайна:</p>
+
+                    <div class="iteration-demo">
+                        <div class="iteration-example" data-iteration="xs">
+                            <div class="iteration-visual">
+                                <div class="iteration-bar"></div>
+                                <div class="iteration-label">XS</div>
+                            </div>
+                            <div class="iteration-info">
+                                <h4><code>&lt;576px</code></h4>
+                                <p>Мобильные телефоны (portrait).</p>
+                            </div>
+                        </div>
+
+                        <div class="iteration-example" data-iteration="sm">
+                            <div class="iteration-visual">
+                                <div class="iteration-bar"></div>
+                                <div class="iteration-label">SM</div>
+                            </div>
+                            <div class="iteration-info">
+                                <h4><code>≥576px</code></h4>
+                                <p>Мобильные телефоны (landscape).</p>
+                            </div>
+                        </div>
+
+                        <div class="iteration-example" data-iteration="md">
+                            <div class="iteration-visual">
+                                <div class="iteration-bar"></div>
+                                <div class="iteration-label">MD</div>
+                            </div>
+                            <div class="iteration-info">
+                                <h4><code>≥768px</code></h4>
+                                <p>Планшеты.</p>
+                            </div>
+                        </div>
+
+                        <div class="iteration-example" data-iteration="lg">
+                            <div class="iteration-visual">
+                                <div class="iteration-bar"></div>
+                                <div class="iteration-label">LG</div>
+                            </div>
+                            <div class="iteration-info">
+                                <h4><code>≥992px</code></h4>
+                                <p>Ноутбуки.</p>
+                            </div>
+                        </div>
+
+                        <div class="iteration-example" data-iteration="xl">
+                            <div class="iteration-visual">
+                                <div class="iteration-bar"></div>
+                                <div class="iteration-label">XL</div>
+                            </div>
+                            <div class="iteration-info">
+                                <h4><code>≥1200px</code></h4>
+                                <p>Десктопы.</p>
+                            </div>
+                        </div>
+
+                        <div class="iteration-example" data-iteration="xxl">
+                            <div class="iteration-visual">
+                                <div class="iteration-bar"></div>
+                                <div class="iteration-label">XXL</div>
+                            </div>
+                            <div class="iteration-info">
+                                <h4><code>≥1400px</code></h4>
+                                <p>Большие мониторы.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="tutorial-title">Адаптивные классы</h3>
+                    <p>Большинство классов Bootstrap имеют responsive варианты:</p>
+
+                    <div class="direction-demo">
+                        <div class="direction-example" data-direction="col">
+                            <div class="direction-visual">
+                                <div class="direction-arrow"></div>
+                            </div>
+                            <div class="direction-info">
+                                <h4><code>.col-{breakpoint}-*</code></h4>
+                                <p>Адаптивные колонки сетки.</p>
+                            </div>
+                        </div>
+
+                        <div class="direction-example" data-direction="d">
+                            <div class="direction-visual">
+                                <div class="direction-arrow"></div>
+                            </div>
+                            <div class="direction-info">
+                                <h4><code>.d-{breakpoint}-*</code></h4>
+                                <p>Адаптивное отображение (display).</p>
+                            </div>
+                        </div>
+
+                        <div class="direction-example" data-direction="text">
+                            <div class="direction-visual">
+                                <div class="direction-arrow"></div>
+                            </div>
+                            <div class="direction-info">
+                                <h4><code>.text-{breakpoint}-*</code></h4>
+                                <p>Адаптивное выравнивание текста.</p>
+                            </div>
+                        </div>
+
+                        <div class="direction-example" data-direction="margin">
+                            <div class="direction-visual">
+                                <div class="direction-arrow"></div>
+                            </div>
+                            <div class="direction-info">
+                                <h4><code>.m{side}-{breakpoint}-*</code></h4>
+                                <p>Адаптивные отступы.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="tutorial-title">Типовые макеты</h3>
+                    <p>Распространённые паттерны макетов в веб-дизайне:</p>
+
+                    <div class="fillmode-demo">
+                        <div class="fillmode-example" data-fillmode="sidebar">
+                            <div class="fillmode-visual">
+                                <div class="fillmode-box"></div>
+                                <div class="fillmode-timeline">
+                                    <div class="fillmode-before">Mobile</div>
+                                    <div class="fillmode-during">Tablet</div>
+                                    <div class="fillmode-after">Desktop</div>
+                                </div>
+                            </div>
+                            <div class="fillmode-info">
+                                <h4>Сайдбар + Контент</h4>
+                                <p>Адаптивный макет с сайдбаром, который сворачивается на мобильных.</p>
+                                <button class="fillmode-btn" data-code="sidebar">Код макета</button>
+                            </div>
+                        </div>
+
+                        <div class="fillmode-example" data-fillmode="cards">
+                            <div class="fillmode-visual">
+                                <div class="fillmode-box"></div>
+                                <div class="fillmode-timeline">
+                                    <div class="fillmode-before">Mobile</div>
+                                    <div class="fillmode-during">Tablet</div>
+                                    <div class="fillmode-after">Desktop</div>
+                                </div>
+                            </div>
+                            <div class="fillmode-info">
+                                <h4>Сетка карточек</h4>
+                                <p>Адаптивная сетка карточек, меняющая количество колонок.</p>
+                                <button class="fillmode-btn" data-code="cards">Код макета</button>
+                            </div>
+                        </div>
+
+                        <div class="fillmode-example" data-fillmode="navbar">
+                            <div class="fillmode-visual">
+                                <div class="fillmode-box"></div>
+                                <div class="fillmode-timeline">
+                                    <div class="fillmode-before">Mobile</div>
+                                    <div class="fillmode-during">Tablet</div>
+                                    <div class="fillmode-after">Desktop</div>
+                                </div>
+                            </div>
+                            <div class="fillmode-info">
+                                <h4>Навигация</h4>
+                                <p>Адаптивная навигация с гамбургер-меню на мобильных.</p>
+                                <button class="fillmode-btn" data-code="navbar">Код макета</button>
+                            </div>
+                        </div>
+
+                        <div class="fillmode-example" data-fillmode="columns">
+                            <div class="fillmode-visual">
+                                <div class="fillmode-box"></div>
+                                <div class="fillmode-timeline">
+                                    <div class="fillmode-before">Mobile</div>
+                                    <div class="fillmode-during">Tablet</div>
+                                    <div class="fillmode-after">Desktop</div>
+                                </div>
+                            </div>
+                            <div class="fillmode-info">
+                                <h4>Многоколоночный</h4>
+                                <p>Контент в несколько колонок на десктопе, в одну на мобильных.</p>
+                                <button class="fillmode-btn" data-code="columns">Код макета</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <h4><i class="fas fa-gamepad"></i> Управление видимостью</h4>
+                        <p>Классы <code>.d-none</code> и <code>.d-{breakpoint}-block</code> позволяют контролировать отображение элементов на разных устройствах.</p>
+                        <div class="playstate-demo">
+                            <div class="playstate-object" id="layoutDemo">
+                                <div class="responsive-demo">
+                                    <div class="d-block d-md-none p-2 bg-danger text-white rounded mb-2">
+                                        Видно только на мобильных
+                                    </div>
+                                    <div class="d-none d-md-block p-2 bg-success text-white rounded mb-2">
+                                        Видно только на планшетах и выше
+                                    </div>
+                                    <div class="d-none d-lg-block p-2 bg-primary text-white rounded">
+                                        Видно только на десктопах
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="playstate-controls">
+                                <button class="control-btn" id="layoutMobile">Мобильный вид</button>
+                                <button class="control-btn" id="layoutTablet">Планшет</button>
+                                <button class="control-btn btn-outline" id="layoutDesktop">Десктоп</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section examples-section" id="examples">
+            <h2 class="section-title"><i class="fas fa-magic"></i> Примеры Bootstrap</h2>
+            <p class="section-subtitle">Готовые примеры для использования в проектах.</p>
+
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-visual">
+                        <div class="example-animation" id="navbarExample">
+                            <nav class="navbar-demo">
+                                <div class="navbar-brand">Brand</div>
+                                <div class="navbar-nav">
+                                    <a href="#" class="nav-link active">Home</a>
+                                    <a href="#" class="nav-link">About</a>
+                                    <a href="#" class="nav-link">Contact</a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="example-content">
+                        <h3>Навигационная панель</h3>
+                        <p>Адаптивная навигация с гамбургер-меню на мобильных.</p>
+                        <button class="example-code-btn" data-code="navbar">Код</button>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-visual">
+                        <div class="example-animation" id="cardsExample">
+                            <div class="cards-demo">
+                                <div class="card-demo">
+                                    <div class="card-img"></div>
+                                    <div class="card-body">
+                                        <h5>Заголовок карточки</h5>
+                                        <p>Текст карточки</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-content">
+                        <h3>Карточка товара</h3>
+                        <p>Карточка для отображения товаров или контента.</p>
+                        <button class="example-code-btn" data-code="cards">Код</button>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-visual">
+                        <div class="example-animation" id="formExample">
+                            <div class="form-demo">
+                                <input type="text" placeholder="Имя" class="form-input">
+                                <input type="email" placeholder="Email" class="form-input">
+                                <button class="form-btn">Отправить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-content">
+                        <h3>Форма входа</h3>
+                        <p>Стилизованная форма с валидацией.</p>
+                        <button class="example-code-btn" data-code="form">Код</button>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-visual">
+                        <div class="example-animation" id="tableExample">
+                            <div class="table-demo">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Имя</th>
+                                            <th>Статус</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Анна</td>
+                                            <td><span class="status active">Активен</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Иван</td>
+                                            <td><span class="status inactive">Неактивен</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-content">
+                        <h3>Таблица данных</h3>
+                        <p>Стилизованная таблица с сортировкой.</p>
+                        <button class="example-code-btn" data-code="table">Код</button>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-visual">
+                        <div class="example-animation" id="modalExample">
+                            <div class="modal-demo">
+                                <div class="modal-header">
+                                    <h5>Модальное окно</h5>
+                                    <button class="modal-close">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Содержимое модального окна</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-content">
+                        <h3>Модальное окно</h3>
+                        <p>Всплывающее окно для диалогов и форм.</p>
+                        <button class="example-code-btn" data-code="modal">Код</button>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-visual">
+                        <div class="example-animation" id="gridExample">
+                            <div class="grid-example">
+                                <div class="row">
+                                    <div class="col-4"><div class="cell"></div></div>
+                                    <div class="col-4"><div class="cell"></div></div>
+                                    <div class="col-4"><div class="cell"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-content">
+                        <h3>Адаптивная сетка</h3>
+                        <p>Сетка карточек, меняющаяся на разных устройствах.</p>
+                        <button class="example-code-btn" data-code="grid">Код</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advanced-examples">
+                <h3 class="tutorial-title">Продвинутые примеры</h3>
+                <p>Сложные макеты с использованием комбинации компонентов:</p>
+
+                <div class="advanced-example" id="advancedExample1">
+                    <h4>Админ-панель</h4>
+                    <div class="admin-panel-demo">
+                        <div class="sidebar"></div>
+                        <div class="main-content">
+                            <div class="header"></div>
+                            <div class="content-grid">
+                                <div class="card-stat"></div>
+                                <div class="card-stat"></div>
+                                <div class="card-stat"></div>
+                                <div class="card-stat"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Полноценная админ-панель с сайдбаром и карточками статистики.</p>
+                    <button class="example-code-btn" data-code="admin">Код</button>
+                </div>
+
+                <div class="advanced-example" id="advancedExample2">
+                    <h4>Интернет-магазин</h4>
+                    <div class="ecommerce-demo">
+                        <div class="product-grid">
+                            <div class="product-card"></div>
+                            <div class="product-card"></div>
+                            <div class="product-card"></div>
+                        </div>
+                        <div class="cart-sidebar"></div>
+                    </div>
+                    <p>Макет интернет-магазина с сеткой товаров и корзиной.</p>
+                    <button class="example-code-btn" data-code="ecommerce">Код</button>
+                </div>
+
+                <div class="advanced-example" id="advancedExample3">
+                    <h4>Блог</h4>
+                    <div class="blog-demo">
+                        <div class="blog-header"></div>
+                        <div class="blog-content">
+                            <div class="article"></div>
+                            <div class="sidebar"></div>
+                        </div>
+                    </div>
+                    <p>Макет блога с сайдбаром и статьями.</p>
+                    <button class="example-code-btn" data-code="blog">Код</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cheatsheet-section">
+            <h2 class="section-title"><i class="fas fa-clipboard-list"></i> Шпаргалка по Bootstrap</h2>
+            <p class="section-subtitle">Основные классы и их значения для быстрого доступа.</p>
+
+            <div class="cheatsheet-grid">
+                <div class="cheatsheet-card">
+                    <h3>Сетка (Grid)</h3>
+                    <table class="cheatsheet-table">
+                        <tr>
+                            <th>Класс</th>
+                            <th>Назначение</th>
+                            <th>Пример</th>
+                        </tr>
+                        <tr>
+                            <td><code>.container</code></td>
+                            <td>Фиксированный центрированный контейнер</td>
+                            <td><code>&lt;div class="container"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.container-fluid</code></td>
+                            <td>Контейнер на всю ширину</td>
+                            <td><code>&lt;div class="container-fluid"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.row</code></td>
+                            <td>Строка для колонок</td>
+                            <td><code>&lt;div class="row"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.col-{breakpoint}-*</code></td>
+                            <td>Колонка (1-12)</td>
+                            <td><code>&lt;div class="col-md-6"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.g-*</code></td>
+                            <td>Отступы между колонками</td>
+                            <td><code>&lt;div class="row g-3"&gt;</code></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="cheatsheet-card">
+                    <h3>Утилиты (Utilities)</h3>
+                    <table class="cheatsheet-table">
+                        <tr>
+                            <th>Класс</th>
+                            <th>Назначение</th>
+                            <th>Пример</th>
+                        </tr>
+                        <tr>
+                            <td><code>.m-* / p-*</code></td>
+                            <td>Отступы (0-5)</td>
+                            <td><code>.m-3 .p-2</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.text-*</code></td>
+                            <td>Цвет текста</td>
+                            <td><code>.text-primary</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.bg-*</code></td>
+                            <td>Цвет фона</td>
+                            <td><code>.bg-success</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.d-*</code></td>
+                            <td>Display свойства</td>
+                            <td><code>.d-flex .d-none</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.border</code></td>
+                            <td>Границы</td>
+                            <td><code>.border .border-primary</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.rounded</code></td>
+                            <td>Скругление углов</td>
+                            <td><code>.rounded .rounded-circle</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.shadow</code></td>
+                            <td>Тени</td>
+                            <td><code>.shadow .shadow-sm</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.fw-*</code></td>
+                            <td>Жирность текста</td>
+                            <td><code>.fw-bold .fw-normal</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.fs-*</code></td>
+                            <td>Размер шрифта</td>
+                            <td><code>.fs-4 .fs-6</code></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="resources">
+                <h3 class="tutorial-title">Полезные ресурсы</h3>
+                <div class="resources-list">
+                    <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" class="resource-link" target="_blank">
+                        <i class="fas fa-book"></i> Официальная документация
+                    </a>
+                    <a href="https://getbootstrap.com/docs/5.3/examples/" class="resource-link" target="_blank">
+                        <i class="fas fa-laptop-code"></i> Примеры Bootstrap
+                    </a>
+                    <a href="https://icons.getbootstrap.com/" class="resource-link" target="_blank">
+                        <i class="fas fa-icons"></i> Bootstrap Icons
+                    </a>
+                    <a href="https://getbootstrap.com/docs/5.3/customize/overview/" class="resource-link" target="_blank">
+                        <i class="fas fa-sliders-h"></i> Кастомизация
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section practice-section">
+            <h2 class="section-title"><i class="fas fa-laptop-code"></i> Практическое задание</h2>
+            <p class="section-subtitle">Примените полученные знания на практике.</p>
+
+            <div class="practice-card">
+                <h3>Создайте адаптивную карточку</h3>
+                <p>Используйте Bootstrap для создания карточки товара с несколькими состояниями:</p>
+
+                <div class="practice-task">
+                    <div class="task-instructions">
+                        <h4>Требования:</h4>
+                        <ul>
+                            <li>Карточка должна быть адаптивной (разный вид на мобильных и десктопах)</li>
+                            <li>Добавьте изображение, заголовок, описание и цену</li>
+                            <li>Используйте утилиты для отступов и цветов</li>
+                            <li>Добавьте кнопку "В корзину" с состоянием hover</li>
+                            <li>Используйте badge для статуса товара</li>
+                        </ul>
+
+                        <div class="code-editor" id="practiceEditor">
+                            <div class="editor-header">
+                                <span>product-card.html</span>
+                                <button class="editor-run" id="runPractice">Запустить код</button>
+                            </div>
+                            <div class="editor-content">
+                                <textarea id="practiceCode">&lt;!-- Создайте карточку товара здесь --&gt;
+&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-md-6 col-lg-4"&gt;
+      &lt;div class="card"&gt;
+        &lt;!-- Ваш код здесь --&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="task-preview">
+                        <h4>Результат:</h4>
+                        <div class="preview-area">
+                            <div class="practice-result" id="practiceResult"></div>
+                            <button class="practice-toggle" id="practiceToggle">Переключить адаптивность</button>
+                        </div>
+                        <div class="task-hint">
+                            <h5><i class="fas fa-lightbulb"></i> Подсказка:</h5>
+                            <p>Используйте классы <code>.card</code>, <code>.card-img-top</code>, <code>.card-body</code>, <code>.btn</code>, <code>.badge</code> и утилиты для отступов.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="logo">
+                    <span class="logo-icon"><i class="fas fa-bootstrap"></i></span>
+                    <span class="logo-text">Bootstrap 5</span>
+                </div>
+                <p>Учебник по Bootstrap 5 для начинающих веб-разработчиков.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/absolutelowtab" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Разделы</h4>
+                <ul>
+                    <li><a href="#grid">Система сеток</a></li>
+                    <li><a href="#components">Компоненты</a></li>
+                    <li><a href="#utilities">Утилиты</a></li>
+                    <li><a href="#layout">Макеты</a></li>
+                    <li><a href="#examples">Примеры</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Ресурсы</h4>
+                <ul>
+                    <li><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank">Официальная документация</a></li>
+                    <li><a href="https://getbootstrap.com/docs/5.3/examples/" target="_blank">Примеры Bootstrap</a></li>
+                    <li><a href="https://icons.getbootstrap.com/" target="_blank">Bootstrap Icons</a></li>
+                    <li><a href="https://getbootstrap.com/docs/5.3/customize/overview/" target="_blank">Кастомизация</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Обновления</h4>
+                <p>Подпишитесь на уведомления о новых уроках (не работает, в разработке).</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Ваш email" required>
+                    <button type="submit" class="btn btn-primary">Подписаться</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Учебник по Bootstrap 5</p>
+            <p class="footer-note">Все примеры кода доступны для свободного использования</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="codeModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Код компонента</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <pre><code id="modalCode"></code></pre>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" id="copyCode">Копировать код</button>
+                <button class="btn btn-primary" id="tryCode">Попробовать в редакторе</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <span id="notificationText">Текст уведомления</span>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
